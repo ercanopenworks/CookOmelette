@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookAsync", "CookAsync\CookAsync.csproj", "{FE710D43-E423-4123-AF7E-C74FEEBAECB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE710D43-E423-4123-AF7E-C74FEEBAECB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE710D43-E423-4123-AF7E-C74FEEBAECB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE710D43-E423-4123-AF7E-C74FEEBAECB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE710D43-E423-4123-AF7E-C74FEEBAECB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {269D9592-0412-454A-9839-41D61FBD8684}
+	EndGlobalSection
+EndGlobal
