@@ -14,6 +14,9 @@ namespace CookAsync
             Console.WriteLine($"Cook operation started.! Thread Id : {Thread.CurrentThread.ManagedThreadId}");
 
             MakeOmeletAsync().Wait();
+            //MakeOmeletAsync().ConfigureAwait(false);
+            //Task.WaitAll(MakeOmeletAsync());
+            
 
             sw.Stop();
             var elapsedTime = sw.ElapsedMilliseconds;
@@ -33,7 +36,17 @@ namespace CookAsync
             {
                 await ScrambleEggsAsync();
                 await AddSaltAsync();
-            });
+            }).ConfigureAwait(false);
+
+
+
+            //Console.WriteLine("-------");
+            //var FirstStepGroupAlternative = await BreakEggsAsync().ContinueWith(async _ =>
+            //{
+            //    await ScrambleEggsAsync();
+            //    await AddSaltAsync();
+            //}, TaskScheduler.FromCurrentSynchronizationContext());
+
 
             Console.WriteLine("-------");
             var SecondStepGroup = await PrepareCookerAsync().ContinueWith(async _ =>
@@ -42,7 +55,7 @@ namespace CookAsync
                 await AddOilAsync();
                 await PutEggsToPanAsync();
 
-            });
+            }).ConfigureAwait(false);
 
             Console.WriteLine("-------");
 
